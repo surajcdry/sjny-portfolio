@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- EDIT: the title shows up in the browser tab and in Google results -->
+  <title>Alex Rivera | Portfolio</title>
+  <meta name="description" content="Alex Rivera is a computer science student who loves building useful things for the web." />
+  <meta name="theme-color" content="#4f7df3" />
+
+  <!-- EDIT (optional): swap the emoji in the tab icon for your own -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Applies the saved light/dark choice before the page paints (avoids a flash) -->
+  <script>
+    try {
+      var saved = localStorage.getItem("theme");
+      var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== NAVBAR ============================== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <!-- EDIT: your initials -->
+      <a class="brand" href="#top">AR</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero container" id="top">
+      <div class="hero-text">
+        <p class="eyebrow">Hi, I'm</p>
+        <!-- EDIT: your name -->
+        <h1>Alex Rivera</h1>
+        <!-- EDIT: one sentence about you -->
+        <p class="lead">Computer science student who loves turning ideas into small, useful web apps.</p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <!-- EDIT: replace the links (delete any you don't want) -->
+        <ul class="social-links" aria-label="Social links">
+          <li>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:you@example.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-photo">
+        <!-- EDIT: put your photo in the assets/ folder and change the file name below -->
+        <img src="assets/avatar.svg" alt="Portrait of Alex Rivera" width="320" height="320" />
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section container reveal" id="about">
+      <h2 class="section-title"><span>01</span> About me</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- EDIT: write a few sentences about yourself. Use more <p> tags for more paragraphs. -->
+          <p>
+            I'm a second-year computer science student who got hooked on programming after
+            building my first website for a school club. Since then I've been exploring
+            everything from front-end design to data analysis.
+          </p>
+          <p>
+            When I'm not coding you can find me playing football, trying new ramen spots,
+            or helping friends debug their assignments. I'm currently looking for a summer
+            internship where I can learn from a great team.
+          </p>
+        </div>
+
+        <!-- EDIT: change the labels and values, add or remove rows -->
+        <dl class="facts">
+          <div><dt>Location</dt><dd>New York, USA</dd></div>
+          <div><dt>Studying</dt><dd>B.S. Computer Science</dd></div>
+          <div><dt>Interests</dt><dd>Web dev, UI design, open source</dd></div>
+          <div><dt>Open to</dt><dd>Internships &amp; collaborations</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== EDUCATION ============================== -->
+    <section class="section container reveal" id="education">
+      <h2 class="section-title"><span>02</span> Education</h2>
+
+      <ol class="timeline">
+        <!-- EDIT: one <li> per school or program. Copy a whole <li>...</li> block to add another. -->
+        <li class="timeline-item">
+          <p class="timeline-date">2024 – Present</p>
+          <h3>B.S. in Computer Science</h3>
+          <p class="timeline-place">Example State University</p>
+          <p>Coursework: Data Structures, Web Development, Databases. Member of the Coding Club and the Hackathon team.</p>
+        </li>
+
+        <li class="timeline-item">
+          <p class="timeline-date">2020 – 2024</p>
+          <h3>High School Diploma</h3>
+          <p class="timeline-place">Example High School</p>
+          <p>Graduated with honors. Founded the school robotics club and captained the debate team.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section container reveal" id="projects">
+      <h2 class="section-title"><span>03</span> Projects</h2>
+      <p class="section-intro">A few things I've built. Click through to see the code or try them out.</p>
+
+      <div class="project-grid">
+
+        <!-- EDIT: one <article> per project. Copy a whole <article>...</article> block to add another. -->
+        <article class="card">
+          <!-- The coloured box shows an emoji. To use a screenshot instead, replace the <span> with:
+               <img src="assets/my-screenshot.png" alt="Screenshot of the project" />  -->
+          <div class="card-thumb thumb-1"><span aria-hidden="true">✅</span></div>
+          <div class="card-body">
+            <h3>Study Planner</h3>
+            <p>A to-do list for students that groups tasks by class and shows what's due this week. I learned how to store data in the browser with localStorage.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/your-username/study-planner" target="_blank" rel="noopener">Code
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              <a href="https://your-username.github.io/study-planner" target="_blank" rel="noopener">Live demo
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-2"><span aria-hidden="true">🌦️</span></div>
+          <div class="card-body">
+            <h3>Weather Now</h3>
+            <p>Search any city and see the current weather. My first time calling a public API and handling loading and error states.</p>
+            <ul class="tags">
+              <li>JavaScript</li><li>REST API</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/your-username/weather-now" target="_blank" rel="noopener">Code
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-thumb thumb-3"><span aria-hidden="true">📊</span></div>
+          <div class="card-body">
+            <h3>Campus Coffee Analysis</h3>
+            <p>Analysed a semester of cafe sales data to find the busiest hours and best-selling drinks, then presented the findings to the student union.</p>
+            <ul class="tags">
+              <li>Python</li><li>Pandas</li><li>Matplotlib</li>
+            </ul>
+            <div class="card-links">
+              <a href="https://github.com/your-username/coffee-analysis" target="_blank" rel="noopener">Code
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section container reveal" id="skills">
+      <h2 class="section-title"><span>04</span> Skills</h2>
+
+      <div class="skills-grid">
+        <!-- EDIT: change the group names and the skills inside each <li> -->
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="chips"><li>JavaScript</li><li>Python</li><li>Java</li><li>SQL</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>Responsive design</li><li>Git &amp; GitHub</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Soft skills</h3>
+          <ul class="chips"><li>Teamwork</li><li>Public speaking</li><li>Problem solving</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section container reveal" id="contact">
+      <div class="contact-card">
+        <h2>Let's talk</h2>
+        <!-- EDIT: say what you'd like people to contact you about -->
+        <p>I'm always happy to chat about projects, internships, or anything tech. My inbox is open.</p>
+        <!-- EDIT: your email address -->
+        <a class="btn btn-primary" href="mailto:you@example.com">Say hello</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <!-- EDIT: your name (the year updates itself) -->
+      <p>&copy; <span id="year">2026</span> Alex Rivera. Built with HTML, CSS &amp; JavaScript, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
